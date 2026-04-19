@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Aqualux
 
-TODO: Document your project here
+Aqualux temizlik ürünleri e-ticaret arayüzü.

@@ -11,6 +11,7 @@ import Products from "./pages/Products.tsx";
 import Categories from "./pages/Categories.tsx";
 import Cart from "./pages/Cart.tsx";
 import Checkout from "./pages/Checkout.tsx";
+import About from "./pages/About.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/urun/:id" element={<ProductDetail />} />
             <Route path="/sepet" element={<Cart />} />
             <Route path="/odeme" element={<Checkout />} />
+            <Route path="/hakkimizda" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
