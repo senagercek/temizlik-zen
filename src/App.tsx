@@ -11,6 +11,7 @@ import Products from "./pages/Products.tsx";
 import Categories from "./pages/Categories.tsx";
 import Cart from "./pages/Cart.tsx";
 import Checkout from "./pages/Checkout.tsx";
+import About from "./pages/About.tsx";
 import AdminLayout from "./components/admin/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/urun/:id" element={<ProductDetail />} />
             <Route path="/sepet" element={<Cart />} />
             <Route path="/odeme" element={<Checkout />} />
+            <Route path="/hakkimizda" element={<About />} />
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="urunler" element={<AdminProducts />} />
