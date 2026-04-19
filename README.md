@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Aqualux e-ticaret projesi
 
-TODO: Document your project here
+Bu proje Vite + React + TypeScript ile geliştirilmiştir.
