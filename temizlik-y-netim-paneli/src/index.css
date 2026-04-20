@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aqualux Admin — Premium SaaS design system. HSL only. */
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 222 32% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 32% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 32% 14%;
+
+    /* Soft trustworthy blue */
+    --primary: 217 91% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 217 100% 96%;
+
+    /* Fresh clean green */
+    --success: 158 72% 42%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 152 76% 94%;
+
+    --secondary: 215 28% 96%;
+    --secondary-foreground: 222 32% 18%;
+
+    --muted: 215 25% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 100% 96%;
+    --accent-foreground: 217 91% 40%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 48 96% 94%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 92% 96%;
+
+    --border: 216 24% 92%;
+    --input: 216 24% 92%;
+    --ring: 217 91% 56%;
+
+    --radius: 0.875rem;
+
+    /* Gradients & shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 56%), hsl(199 89% 58%));
+    --gradient-success: linear-gradient(135deg, hsl(158 72% 42%), hsl(173 80% 40%));
+    --gradient-soft: linear-gradient(135deg, hsl(217 100% 97%), hsl(152 76% 96%));
+
+    --shadow-xs: 0 1px 2px 0 hsl(217 30% 20% / 0.04);
+    --shadow-sm: 0 1px 3px 0 hsl(217 30% 20% / 0.06), 0 1px 2px -1px hsl(217 30% 20% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(217 30% 20% / 0.08), 0 2px 4px -2px hsl(217 30% 20% / 0.04);
+    --shadow-lg: 0 12px 32px -8px hsl(217 40% 25% / 0.12);
+    --shadow-glow: 0 8px 24px -6px hsl(217 91% 56% / 0.35);
+
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 20% 30%;
+    --sidebar-primary: 217 91% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 100% 96%;
+    --sidebar-accent-foreground: 217 91% 40%;
+    --sidebar-border: 216 24% 93%;
+    --sidebar-ring: 217 91% 56%;
+  }
+
+  .dark {
+    --background: 222 28% 8%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 28% 11%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 28% 11%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 217 60% 18%;
+
+    --success: 158 64% 48%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 158 40% 16%;
+
+    --secondary: 222 24% 16%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 222 24% 16%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 60% 18%;
+    --accent-foreground: 217 91% 75%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 222 28% 8%;
+    --warning-soft: 38 50% 18%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 50% 18%;
+
+    --border: 222 22% 20%;
+    --input: 222 22% 20%;
+    --ring: 217 91% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(199 89% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 48%), hsl(173 70% 42%));
+    --gradient-soft: linear-gradient(135deg, hsl(217 60% 14%), hsl(158 40% 14%));
+
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 12px -2px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 12px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 8px 24px -6px hsl(217 91% 60% / 0.4);
+
+    --sidebar-background: 222 28% 10%;
+    --sidebar-foreground: 215 20% 75%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 60% 18%;
+    --sidebar-accent-foreground: 217 91% 80%;
+    --sidebar-border: 222 22% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+  }
+}
+
+@layer utilities {
+  .gradient-primary { background: var(--gradient-primary); }
+  .gradient-success { background: var(--gradient-success); }
+  .gradient-soft { background: var(--gradient-soft); }
+  .shadow-card { box-shadow: var(--shadow-sm); }
+  .shadow-card-hover { box-shadow: var(--shadow-md); }
+  .shadow-elevated { box-shadow: var(--shadow-lg); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .transition-base { transition: var(--transition-base); }
+}
