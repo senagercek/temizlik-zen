@@ -1,10 +1,10 @@
-import { Bell, Search, Moon, Sun } from "lucide-react";
+import { Bell, Search, Moon, Sun, Store } from "lucide-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,6 +34,13 @@ export function AdminHeader() {
       </div>
 
       <div className="ml-auto flex items-center gap-2">
+        <Link to="/">
+          <Button variant="outline" className="hidden rounded-xl md:inline-flex">
+            <Store className="mr-2 h-4 w-4" />
+            Mağazaya Dön
+          </Button>
+        </Link>
+
         <Button
           variant="ghost"
           size="icon"
