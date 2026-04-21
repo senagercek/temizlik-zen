@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { clearAdminToken } from "@/lib/adminAuth";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -93,7 +94,15 @@ export function AdminHeader() {
             <DropdownMenuItem>Profil</DropdownMenuItem>
             <DropdownMenuItem>Ayarlar</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-destructive">Çıkış Yap</DropdownMenuItem>
+            <DropdownMenuItem
+              className="text-destructive"
+              onClick={() => {
+                clearAdminToken();
+                window.location.href = "/admin/giris";
+              }}
+            >
+              Çıkış Yap
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

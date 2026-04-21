@@ -13,6 +13,8 @@ import Cart from "./pages/Cart.tsx";
 import Checkout from "./pages/Checkout.tsx";
 import About from "./pages/About.tsx";
 import AdminLayout from "./components/admin/AdminLayout";
+import AdminGuard from "./components/admin/AdminGuard";
+import AdminLogin from "./pages/admin/AdminLogin";
 import Dashboard from "./pages/admin/Dashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
 import AdminProductEdit from "./pages/admin/AdminProductEdit";
@@ -41,18 +43,21 @@ const App = () => (
             <Route path="/sepet" element={<Cart />} />
             <Route path="/odeme" element={<Checkout />} />
             <Route path="/hakkimizda" element={<About />} />
-            <Route path="/admin" element={<AdminLayout />}>
-              <Route index element={<Dashboard />} />
-              <Route path="urunler" element={<AdminProducts />} />
-              <Route path="urunler/yeni" element={<AdminProductEdit />} />
-              <Route path="urunler/:id" element={<AdminProductEdit />} />
-              <Route path="kategoriler" element={<AdminCategories />} />
-              <Route path="siparisler" element={<AdminOrders />} />
-              <Route path="siparisler/:id" element={<AdminOrderDetail />} />
-              <Route path="musteriler" element={<AdminCustomers />} />
-              <Route path="yorumlar" element={<AdminReviews />} />
-              <Route path="kampanyalar" element={<AdminCampaigns />} />
-              <Route path="ayarlar" element={<AdminSettings />} />
+            <Route path="/admin/giris" element={<AdminLogin />} />
+            <Route element={<AdminGuard />}>
+              <Route path="/admin" element={<AdminLayout />}>
+                <Route index element={<Dashboard />} />
+                <Route path="urunler" element={<AdminProducts />} />
+                <Route path="urunler/yeni" element={<AdminProductEdit />} />
+                <Route path="urunler/:id" element={<AdminProductEdit />} />
+                <Route path="kategoriler" element={<AdminCategories />} />
+                <Route path="siparisler" element={<AdminOrders />} />
+                <Route path="siparisler/:id" element={<AdminOrderDetail />} />
+                <Route path="musteriler" element={<AdminCustomers />} />
+                <Route path="yorumlar" element={<AdminReviews />} />
+                <Route path="kampanyalar" element={<AdminCampaigns />} />
+                <Route path="ayarlar" element={<AdminSettings />} />
+              </Route>
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
